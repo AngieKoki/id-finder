@@ -44,4 +44,6 @@ h1{
     color: #fff;
     border:solid #0099cc;
 }
-
+.hideIt{
+    display:none;
+}

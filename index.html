@@ -8,11 +8,74 @@
     <title>ID FINDER SITE</title>
 </head>
 <body>
-    <div class='landing'>
-        <h1>ID FINDER </h1>
-        <button class='btn'> File</button>
-        <button class='btn'>Find</button>
+    <div class="landing">
+        <h1>FINDAPP </h1>
+        <p class='hideIt'>Click here to find your lost document</p>
+        <a href="#finder"><button class='btn'>File</button></a>
+        <p class='hideIt'>Click here to find your lost document</p>
+        <a href="#loser"><button class='btn'>Find</button></a>
     </div>
+        <div class="container" id="finder">
+       <h1>ID FINDER SITE</h1>
+         <h2>File the found document</h2>
+            <p>Fill in the form below with the details of the found document</p>
+            <form>
+                <label for="documents">Document type:</label>
+                <select name="documents" id="documents">
+                  <option value="NationalId">National Id</option>
+                  <option value="passport">Passport</option>
+                  <option value="studentId">Student Id</option>
+                  <option value="insuranceCard">Insurance card</option>
+                <option value="atmCard">ATM card</option>
+                </select>
+                <br><br>
+              </form>
+           <form>
+               <label for="documentNo">Document No:</label><br>
+                <input type="text" id="documentNo" name="documentNo" required><br>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" required><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" required><br>
+                <label for="dropoff">Drop off point:</label><br>
+                <input type="text" id="dropoff" name="dropoff" required><br><br>
+                <button type="reset" value="Reset">Reset</button>
+                <input type="submit" value="Submit">
+            </form>
+            </div>
+           <div class="container" id="loser">
+              <h2>Find your document</h2>
+                <p>Enter your first name and document ID to check availability of document</p>
+             <form>
+                <label for="documents">Choose the document type:</label>
+                <select name="documents" id="documents">
+                  <option value="NationalId">National Id</option>
+                  <option value="passport">Passport</option>
+                  <option value="studentId">Student Id</option>
+                  <option value="insuranceCard">Insurance card</option>
+                <option value="atmCard">ATM card</option>
+                </select>
+                <br><br>
+                <label for="f-name">First Name:</label><br>
+                <input type="text" id="f-name" name="f-name" required><br>
+                <label for="docNo">Document No:</label><br>
+                <input type="text" id="docNo" name="docNo" required><br><br>
+                <button type="submit" value="Submit">Submit</button>
+                <button type="reset" value="Reset">Reset</button>
+           </form>
+             <div class="modal" id="searcher-contact">
+              <form>
+                <label for="e-mail">Email:</label><br>
+                <input type="text" id="e-mail" name="e-mail" required><br>
+                <label for="phone">Phone:</label><br>
+                <input type="tel" id="phone" name="phone" required><br><br>
+                <button type="submit" value="Submit">Submit</button>
+                <button type="reset" value="Reset">Reset</button>
+            </form>
+            </div>
+            </div>
     
     <script src="/js/jquery-3.5.1.js"></script>
     <script src="/js/scripts.js"></script>
