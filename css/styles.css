@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato&family=Lemonada:wght@300&family=Monoton&family=Montserrat&display=swap');
+body{
+    margin:0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.2;
+    font-family: 'Indie Flower', cursive;
+
+    
+}
+.landing{
+    background:url(/images/pexels-alex-fu-1694102.jpg);
+    height:100vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    width:100%;
+
+}
+h1{
+    font-size:72px;
+    background: -webkit-linear-gradient(#0099cc,#FF4500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.btn{
+    margin-top:1rem;
+    width:200px;
+    height:40px;
+    /* background: -webkit-linear-gradient(#333); */
+    background-color:transparent;
+    border:solid #333;;
+    color:#fff;  
+    filter:blur(0px);
+    -webkit-filter: blur(0px);
+    
+}
+/* .landing:hover{
+    filter:blur(2px);
+    -webkit-filter: blur(2px);
+}
+.btn:hover .landing{
+    filter:blur(0px);
+    -webkit-filter: blur(0px);
+    background: #333;
+} */
