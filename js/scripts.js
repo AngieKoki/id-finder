@@ -4,41 +4,61 @@ function documentType(card){
   this.cardDetails = [];
 }
 
-function cardDetails(number, name, contact, location, dropOff){
+function cardDetails(number, firstName, lastName, contact, dropOff){
   this.cardNumber = number;
-  this.cardName = name;
+  this.cardFirstName = firstName;
+  this.cardFirstName = lastName;
   this.cardContact = contact;
-  this.cardLocation = location;
   this.cardDropOffPoint = dropOff;
 }
 
-function searcher(number, name, contact){
+function searcher(number, name){
   this.searcherNumber = number;
   this.searcherName = name;
-  this.searcherContact = contact;
+  this.searcherContact = [];
+}
+
+function searcherContact(email, phone){
+  this.searcherEmail = email;
+  this.searcherPhone = phone;
 }
 
 //user interface logic
 $(document).ready(function(){
-  $("form#finder").submit(function(event){
+  $("#finder").submit(function(event){
     event.preventDefault();
+    console.log("here");
 
     var inputtedCardType = $("select#documents").val();
     var newDocumentType = new documentType(inputtedCardType);
 
+    var inputtedNumber = $("input#documentNo").val();
     var inputtedFirstName = $("input#fname").val();
     var inputtedLastName = $("input#lname").val();
     var inputtedEmail = $("input#email").val();
-    var inputtedLocation = $("input#location").val();
     var inputtedDropoff = $("input#dropoff").val();
-    var newCardDetails = new cardDetails(inputtedFirstName, inputtedLastName, inputtedEmail, inputtedLocation, inputtedDropoff);
+    var newCardDetails = new cardDetails(inputtedNumber, inputtedFirstName, inputtedLastName, inputtedEmail, inputtedDropoff);
     newDocumentType.cardDetails.push(newCardDetails);
+    console.log("Thank you for your submission!");
+    
+
+    //$("div#filer-alert").append("<p>" + "Thank you for submitting the card details for " + inputtedNumber + "</p>")
 
   });
 
-  $("form#loser").submit(function(event){
+  $("#loser").submit(function(event){
     event.preventDefault();
 
-    var inputtedSearcherNumber = $("input")
+    var inputtedSearcherNumber = $("input#docNo").val();
+    var inputtedSearcherName = $("input#f-name").val();
+    var newSearcher = new searcher(inputtedSearcherNumber, inputtedSearcherName);
+
+    var inputtedSearcherEmail = $("input#e-mail").val();
+    var inputtedSearcherPhone = $("input#phone").val();
+    var newSearcherContact = new searcherContact(inputtedSearcherEmail, inputtedSearcherPhone);
+    newSearcher.searcherContact.push(newSearcherContact);
+    
   });
+
+    
 });
