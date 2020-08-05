@@ -32,32 +32,52 @@ Assuming you are already on github:
 No Known Bugs or dependencies
 
 ## BDD
+### Feature: File Button
+### Description
+As a user
+I want to click the find button 
+So that I can file a document lost
+
+### Scenarios
+#### File button clicked:
+
+1. Given the file button is clicked
+2.    and document type is selected
+3.    and ID details are filed
+4.    and location is inputted
+5. When the user clicks on Submit
+6. Then the nearest drop off point is suggested
+7. And a feedback modal pops up to rate the service
+
 ### Feature: Find Button
 ### Description
 As a user
-I want to fill in a form 
-So that I can send a message to Delani Studio
+I want to click the find button 
+So that I can find a lost document
 
 ### Scenarios
-#### Name, email and message inputted:
+#### Find button clicked:
 
-1. Given the name is inputted
-2.    and email is inputted
-3.    and message is inputted
+1. Given the find button is clicked
+2.    and document type is selected
+3.    and ID details are filed: name and ID number
 4. When the user clicks on Submit
-5. Then a thank you message pops up.
+5. Then an alert modal is generated if match has been found or not
 
-#### Invalid email inputted:
+#### Match found:
 
-1. Given the email inputted is invalid
-2. When the user clicks on Submit
-3. Then the application generates an error message to input a valid email address
+1. Given a match is found
+2. Then an alert modal is generated showing the pickup center
+3. And the contact details of that center with opening hours are shown
+4. A feedback modal pops up to rate the services
 
-#### No input in any field:
+#### Match NOT found:
 
-1. Given no input in any field
-2. When the user clicks on Submit
-3. Then the application generates an error message to fill in the necessary fields
+1. Given a match is not found
+2. Then an alert modal is generated showing match not found
+3. And the user is prompted to leave their contact details
+4. A feedback modal pops up to rate the services
+
 
 ## Technologies used
 *HTML 

@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato&family=Lemonada:wght@300&family=Monoton&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 body{
     margin:0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 1.2;
-    font-family: 'Indie Flower', cursive;
-
+    font-family: 'Monoton', cursive;
     
 }
 .landing{
@@ -24,6 +23,7 @@ body{
 h1{
     font-size:72px;
     background: -webkit-linear-gradient(#0099cc,#FF4500);
+    background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -31,20 +31,17 @@ h1{
     margin-top:1rem;
     width:200px;
     height:40px;
-    /* background: -webkit-linear-gradient(#333); */
     background-color:transparent;
     border:solid #333;;
     color:#fff;  
+    font-size: 20px;
+    font-weight: bold;
     filter:blur(0px);
     -webkit-filter: blur(0px);
-    
 }
-/* .landing:hover{
-    filter:blur(2px);
-    -webkit-filter: blur(2px);
-}
-.btn:hover .landing{
-    filter:blur(0px);
-    -webkit-filter: blur(0px);
+.btn:hover{
     background: #333;
-} */
+    color: #fff;
+    border:solid #0099cc;
+}
+
