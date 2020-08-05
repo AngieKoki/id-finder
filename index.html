@@ -8,14 +8,24 @@
     <title>ID FINDER SITE</title>
 </head>
 <body>
-    
-        <h1>ID FINDER SITE</h1>
-     <h2>The Finder Details</h2>
-        <p>The finder details consist of the details of the person who found the document</p>
-        <p>the finder will be able to drop the found document at a nearer drop off point</p>
-        <p>a form will have to be filled so as to leave details</p>
-         
-           <h2>Fill in the form</h2>
+  <div class="container" id="landing-section">
+    <h1>FInDAPP</h1>
+    <p></p>
+    <div id="">
+     <p>Click here to file a found document</p>
+      <a href="#finder"><button>File</button></a>
+    </div>
+    <div id="">
+      <p>Click here to find your lost document</p>
+      <a href="#loser"><button>Find</button></a>
+      
+    </div>
+  </div>
+    <div class="container" id="finder">
+   <h1>ID FINDER SITE</h1>
+     <h2>File the found document</h2>
+        <p>Fill in the form below with the details of the found document</p>
+        
         <form>
             <label for="documents">Document type:</label>
             <select name="documents" id="documents">
@@ -29,9 +39,7 @@
             
           </form>
             
-       
-              
-          <form>
+       <form>
             <label for="fname">First name:</label><br>
             <input type="text" id="fname" name="fname" required><br>
             <label for="lname">Last name:</label><br>
@@ -45,26 +53,13 @@
             <button type="reset" value="Reset">Reset</button>
             <input type="submit" value="Submit">
         </form>
-       
-        <h2>The Looser Details</h2>
-        <p>The looser details consist of the details of the person who lost the document</p>
-        <p>the looser will fill in their lost item's details and will pick their document at drop off point indicated by the finder</p>
-        <p>a form will be filled to check document availability</p>
+        </div>
 
-        <h2>Fill in to check document availability</h2>
-        <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br>
-            <label for="documentNo">Document No:</label><br>
-            <input type="text" id="documentNo" name="documentNo" required><br><br>
-            <button type="submit" value="Submit">Submit</button>
-            <button type="reset" value="Reset">Reset</button>
-
-          </form>
-
-          <h2>If available:</h2>
-
-          <form>
+       <div class="container" id="loser">
+          <h2>Find your document</h2>
+            <p>Enter your first name and document ID to check availability of document</p>
+          
+         <form>
             <label for="documents">Choose the document type:</label>
             <select name="documents" id="documents">
               <option value="NationalId">National Id</option>
@@ -74,10 +69,16 @@
             <option value="atmCard">ATM card</option>
             </select>
             <br><br>
-         </form>
-      
          
-         <form>
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname" required><br>
+            <label for="documentNo">Document No:</label><br>
+            <input type="text" id="documentNo" name="documentNo" required><br><br>
+            <button type="submit" value="Submit">Submit</button>
+            <button type="reset" value="Reset">Reset</button>
+       </form>
+         <div class="modal" id="searcher-contact">
+          <form>
             <label for="email">Email:</label><br>
             <input type="text" id="email" name="email" required><br>
             <label for="phone">Phone:</label><br>
@@ -85,15 +86,8 @@
             <button type="submit" value="Submit">Submit</button>
             <button type="reset" value="Reset">Reset</button>
         </form>
-          
-   
-
-    <script src="/js/jquery-3.5.1.js"></script>
-    <script src="/js/scripts.js"></script>
-</body>
-</html>
-
-
+        </div>
+        </div>
 
 
   
