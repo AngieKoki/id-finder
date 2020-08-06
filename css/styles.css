@@ -13,7 +13,7 @@ body{
 }
 .landing{
     font-family: 'Monoton', cursive;
-    background:url(images/view.jpg);
+    background:url('../images/view.jpg');
     height:100vh;
     background-size:cover;
     background-repeat: no-repeat;
