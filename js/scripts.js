@@ -1,5 +1,5 @@
 //business logic
-function documentType(card){
+function identityDocument(card){
   this.cardType = card;
   this.cardDetails = [];
 }
@@ -30,7 +30,7 @@ $(document).ready(function(){
     console.log("here");
 
     var inputtedCardType = $("select#documents").val();
-    var newDocumentType = new documentType(inputtedCardType);
+    var newidentityDocument = new identityDocument(inputtedCardType);
 
     var inputtedNumber = $("input#documentNo").val();
     var inputtedFirstName = $("input#fname").val();
@@ -38,10 +38,9 @@ $(document).ready(function(){
     var inputtedEmail = $("input#email").val();
     var inputtedDropoff = $("input#dropoff").val();
     var newCardDetails = new cardDetails(inputtedNumber, inputtedFirstName, inputtedLastName, inputtedEmail, inputtedDropoff);
-    newDocumentType.cardDetails.push(newCardDetails);
+    newidentityDocument.cardDetails.push(newCardDetails);
     alert("Thank you for your submission!");
     
-
     //$("div#filer-alert").append("<p>" + "Thank you for submitting the card details for " + inputtedNumber + "</p>")
 
   });
@@ -53,6 +52,18 @@ $(document).ready(function(){
     var inputtedSearcherName = $("input#f-name").val();
     var newSearcher = new searcher(inputtedSearcherNumber, inputtedSearcherName);
 
+    function searchIdentityDocument(ar, val){
+      for (var i = 0, len = ar.length; i < len; i++){
+        if (ar[i] === val){
+          alert("Your document is available");
+        }
+        else {
+          alert("This document is not available");
+        }
+      }
+    }
+
+    
     var inputtedSearcherEmail = $("input#e-mail").val();
     var inputtedSearcherPhone = $("input#phone").val();
     var newSearcherContact = new searcherContact(inputtedSearcherEmail, inputtedSearcherPhone);

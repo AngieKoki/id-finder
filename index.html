@@ -10,16 +10,13 @@
 <body>
 <div class="container" id="landing-section">
 	<h1>FInDAPP</h1>
-	<p></p>
-	<div id="">
-		<p>Click here to file a found document</p>
-		<a href="#finder"><button>File</button></a>
-	</div>
-	<div id="">
-		<p>Click here to find your lost document</p>
-		<a href="#loser"><button>Find</button></a>
-		
-	</div>
+		<p></p>
+		<div id="finder-button">
+			<a href="#finder"><button>File</button></a>
+		</div>
+		<div id="loser-button">
+			<a href="#loser"><button>Find</button></a>
+		</div>
 </div>
 	<div class="container" id="finder">
 	<h1>ID FINDER SITE</h1>
@@ -53,9 +50,13 @@
 					<button type="reset" value="Reset">Reset</button>
 					<input type="submit" value="Submit">
 			</form>
-			<div class="modal" id="filer-alert">
-				<p></p>
-			</div>
+				<div class="modal" id="filer-alert">
+					<div class="modal-content">
+						<div class = "close">+</div>
+						<p>Thank you for submitting this ID. We will send you an alert once the owner is found.</p>
+						
+					</div>
+				</div>
 			</div>
 
 			<div class="container" id="loser">
@@ -80,22 +81,31 @@
 					<button type="submit" value="Submit">Submit</button>
 					<button type="reset" value="Reset">Reset</button>
 			</form>
-				<div class="modal" id="searcher-contact">
-				<form>
-					<label for="e-mail">Email:</label><br>
-					<input type="text" id="e-mail" name="e-mail" required><br>
-					<label for="phone">Phone:</label><br>
-					<input type="tel" id="phone" name="phone" required><br><br>
-					<button type="submit" value="Submit">Submit</button>
-					<button type="reset" value="Reset">Reset</button>
-			</form>
+			<div class="modal" id="searcher-alert">
+				<div class="modal-content">
+					<div class = "close">+</div>
+					<p>A document matching the document number was found!</p>
+
+				</div>
+			</div>
+			
+			<div class="modal" id="searcher-contact">
+				<div class="modal-content">
+					<div class = "close">+</div>
+					<img src = "" alt="">
+					<form>
+						<label for="e-mail">Email:</label><br>
+						<input type="text" id="e-mail" name="e-mail" required><br>
+						<label for="phone">Phone:</label><br>
+						<input type="tel" id="phone" name="phone" required><br><br>
+						<button type="submit" value="Submit">Submit</button>
+						<button type="reset" value="Reset">Reset</button>
+					</form>
+				</div>
 			</div>
 			</div>
 				
-	
-
 	<script src="js/jquery-3.5.1.js"></script>
 	<script src="js/scripts.js"></script>
-</body>
+	</body>
 </html>
-
