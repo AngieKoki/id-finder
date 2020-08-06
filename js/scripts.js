@@ -20,7 +20,19 @@ function searcherContact(email, phone){
   this.searcherPhone = phone;
 }
 //USER INTERFACE LOGIC
+//TOGGLE BUTTONS
+
 $(document).ready(function(){
+  $('#findIt').click(function(){
+    $('#findIt').slideUp();
+    $('#findBox').show();
+  });
+  $('#loseIt').click(function(){
+    $('#loseIt').slideUp();
+    $('#loseBox').show();
+  });
+  //SUBMIT SECTION FOR FORM
+
   $("#finder").submit(function(event){
     event.preventDefault();
     var inputtedCardType = $("select#finderDocumentInput").val();
@@ -32,7 +44,8 @@ $(document).ready(function(){
     var inputtedDropoff = $("input#dropoff").val();
     var newCardDetails = new cardDetails(inputtedNumber, inputtedFirstName, inputtedLastName, inputtedEmail, inputtedDropoff);
     newidentityDocument.cardDetails.push(newCardDetails);
-    $("filer-alert").style.display = "block";
+    alert('Thank you for submitting the card details for ' + inputtedNumber )
+    // $("#filer-alert").style.display = "block";
     //$("div#filer-alert").append("<p>" + "Thank you for submitting the card details for " + inputtedNumber + "</p>")
   });
   $("#loser").submit(function(event){
@@ -43,16 +56,23 @@ $(document).ready(function(){
     var newSearcher = new searcher(inputtedDocumentType, inputtedSearcherNumber, inputtedSearcherName);
     // searcherIdentityDocument(inputtedDocumentType, inputtedSearcherNumber);
     if (inputtedSearcherNumber === "111"){
-      prompt("111");
+      alert('Mambo '+inputtedSearcherName+ " Your document has been found ");
       $("#searcher-alert").style.display = "flex";
     }
     else {
-      //alert("This document is not available");
-      $("#searcher-contact").style.display = "flex"
+      $('#searcher-contact').show();
+      $('#searcher-contact').submit(function(){
+        var inputtedSearcherEmail = $("input#e-mail").val();
+        var inputtedSearcherPhone = $("input#phone").val();
+        var newSearcherContact = new searcherContact(inputtedSearcherEmail, inputtedSearcherPhone);
+        newSearcher.searcherContact.push(newSearcherContact);
+        (alert('We will reach out to you on the number or email: '+inputtedSearcherEmail +' '+inputtedSearcherPhone));
+
+      })
+
+
+      
     }
-    var inputtedSearcherEmail = $("input#e-mail").val();
-    var inputtedSearcherPhone = $("input#phone").val();
-    var newSearcherContact = new searcherContact(inputtedSearcherEmail, inputtedSearcherPhone);
-    newSearcher.searcherContact.push(newSearcherContact);
+    
   });
 });

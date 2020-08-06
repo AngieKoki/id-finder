@@ -50,9 +50,7 @@ h1{
     color: #fff;
     border:solid #0099cc;
 }
-.hideIt{
-    display:none;
-}
+
 #findBox{
     display: none;
 }
@@ -137,8 +135,7 @@ footer{
     font-weight: bold;
     font-family: 'Monoton', cursive;   
 } 
-.modal{
-    display: none;
+#filer-alert{
     position:fixed;
     z-index:1;
     left: 0;

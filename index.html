@@ -10,10 +10,8 @@
 <body>
     <div class="landing">
         <h1>FINDAPP </h1>
-        <p class='hideIt'>Click here to find your lost document</p>
-        <a href="#finder"><button class='btn1'>File</button></a>
-        <p class='hideIt'>Click here to find your lost document</p>
-        <a href="#loser"><button class='btn1'>Find</button></a>
+        <a href="#finder"><button id='findIt'class='btn1'>File</button></a>
+        <a href="#loser"><button id='loseIt'class='btn1'>Find</button></a>
     </div>
     <div id='findBox'>
         <div class='logbox'>
@@ -42,7 +40,7 @@
                     <label for="dropoff">Drop off point:</label><br>
                     <input class='input' type="text" id="dropoff" name="dropoff" placeholder="Drop-off point"required><br><br>
                     
-                    <button type="submit" value="Submit">Submit</button>
+                    <button id='submit'type="submit" value="Submit">Submit</button>
                     <button class='btn btn-dark'type="reset" value="Reset">Reset</button>
                 </form>
                 <div class="modal" id="filer-alert">
@@ -86,16 +84,17 @@
                       <p>A document matching the document number was found!</p>
                     </div>
                 </div>
-                <button class='clseBtn'>Leave your details</button>
+                <!-- <button class='clseBtn'>Leave your details</button> -->
 
                 <div class="modal" id="searcher-contact">
                     <div class="modal-content">
                         <div class = "close">+</div>
                         <form>
+                            <h2>This document is not availble please fill in your contact details</h2>
                             <label for="e-mail">Email:</label><br>
                             <input type="text" id="e-mail" name="e-mail" placeholder='Enter your email' required><br>
                             <label for="phone">Phone:</label><br>
-                            <input type="tel" id="phone" name="phone" required placeholder='Enter your email'> <br><br>
+                            <input type="tel" id="phone" name="phone" required placeholder='Enter your phone number'> <br><br>
                             <button type="submit" value="Submit">Submit</button>
                             <button type="reset" value="Reset">Reset</button>
                         </form>
