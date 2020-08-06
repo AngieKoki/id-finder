@@ -45,6 +45,14 @@
                     <button type="submit" value="Submit">Submit</button>
                     <button class='btn btn-dark'type="reset" value="Reset">Reset</button>
                 </form>
+                <div class="modal" id="filer-alert">
+                    <div class="modal-content">
+                      <div class = "close">+</div>
+                      <p>Thank you for submitting this ID. We will send you an alert once the owner is found.</p>
+                      
+                    </div>
+                  </div>
+                </div>
             </div>
         </div>
     </div>
@@ -71,15 +79,28 @@
                     <button type="submit" value="Submit">Submit</button>
                     <button class='btn btn-dark' type="reset" value="Reset">Reset</button>
                 </form>
+                
+                <div class="modal" id="searcher-alert">
+                    <div class="modal-content">
+                      <div class = "close">+</div>
+                      <p>A document matching the document number was found!</p>
+                    </div>
+                </div>
+                <button class='clseBtn'>Leave your details</button>
+
                 <div class="modal" id="searcher-contact">
-                    <form>
-                        <label for="e-mail">Email:</label><br>
-                        <input type="text" id="e-mail" name="e-mail" placeholder='Enter your email' required><br>
-                        <label for="phone">Phone:</label><br>
-                        <input type="tel" id="phone" name="phone" required placeholder='Enter your email'> <br><br>
-                        <button type="submit" value="Submit">Submit</button>
-                        <button type="reset" value="Reset">Reset</button>
-                    </form>
+                    <div class="modal-content">
+                        <div class = "close">+</div>
+                        <form>
+                            <label for="e-mail">Email:</label><br>
+                            <input type="text" id="e-mail" name="e-mail" placeholder='Enter your email' required><br>
+                            <label for="phone">Phone:</label><br>
+                            <input type="tel" id="phone" name="phone" required placeholder='Enter your email'> <br><br>
+                            <button type="submit" value="Submit">Submit</button>
+                            <button type="reset" value="Reset">Reset</button>
+                        </form>
+                    </div>
+                    
                 </div>
             </div>
         </div>
