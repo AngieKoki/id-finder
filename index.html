@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.min.css" rel='stylesheet'>
+    <link href="/css/styles.css" rel='stylesheet'>
+    <title>ID FINDER SITE</title>
+</head>
+<body>
+    <div class="landing">
+        <h1>FINDAPP </h1>
+        <p class='hideIt'>Click here to find your lost document</p>
+        <a href="#finder"><button class='btn1'>File</button></a>
+        <p class='hideIt'>Click here to find your lost document</p>
+        <a href="#loser"><button class='btn1'>Find</button></a>
+    </div>
+    <div id='findBox'>
+        <div class='logbox'>
+            <div class="container" id="finder">
+                <div class='titleStyle'>
+                    <h2>File the found document</h2>
+                    <p>Fill in the form below with the details of the found document</p>
+                </div>
+                <form>
+                    <label for="documents">Document type:</label>
+                    <select name="documents" id="documents">
+                    <option value="NationalId">National Id</option>
+                    <option value="passport">Passport</option>
+                    <option value="studentId">Student Id</option>
+                    <option value="insuranceCard">Insurance card</option>
+                    <option value="atmCard">ATM card</option>
+                    </select>
+                    <br><br>
+                    <label for="documentNo">Document No:</label><br>
+                    <input class='input' type="text" id="documentNo" name="documentNo" required placeholder='Enter your Document Number'><br>
+                    <label for="fname">Full name:</label><br>
+                    <input class='input' type="text" id="fname" name="fname" placeholder="First Name" required><br>
+                    <input class='input' type="text" id="lname" name="lname" placeholder="Last Name"required><br><br>
+                    <label for="email">Email:</label><br>
+                    <input class='input' type="text" id="email" name="email" placeholder="Enter Email"required><br>
+                    <label for="dropoff">Drop off point:</label><br>
+                    <input class='input' type="text" id="dropoff" name="dropoff" placeholder="Drop-off point"required><br><br>
+                    
+                    <button type="submit" value="Submit">Submit</button>
+                    <button class='btn btn-dark'type="reset" value="Reset">Reset</button>
+                </form>
+                <div class="modal" id="filer-alert">
+                    <div class="modal-content">
+                      <div class = "close">+</div>
+                      <p>Thank you for submitting this ID. We will send you an alert once the owner is found.</p>
+                      
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id='loseBox'>
+        <div class='logbox'>
+            <div class="container" id="loser">
+                <h2>Find your document</h2>
+                <p>Enter your first name and document ID to check availability of document</p>
+                <form>
+                    <label for="documents">Choose the document type:</label>
+                    <select name="documents" id="documents">
+                    <option value="NationalId">National Id</option>
+                    <option value="passport">Passport</option>
+                    <option value="studentId">Student Id</option>
+                    <option value="insuranceCard">Insurance card</option>
+                    <option value="atmCard">ATM card</option>
+                    </select>
+                    <br><br>
+                    <label for="f-name">First Name:</label><br>
+                    <input class='input' type="text" id="f-name" name="f-name" placeholder='Enter your First Name'required><br>
+                    <label for="docNo">Document No:</label><br>
+                    <input class='input' type="text" id="docNo" name="docNo" placeholder='Enter your Document Number' required><br><br>
+                    <button type="submit" value="Submit">Submit</button>
+                    <button class='btn btn-dark' type="reset" value="Reset">Reset</button>
+                </form>
+                
+                <div class="modal" id="searcher-alert">
+                    <div class="modal-content">
+                      <div class = "close">+</div>
+                      <p>A document matching the document number was found!</p>
+                    </div>
+                </div>
+                <button class='clseBtn'>Leave your details</button>
+
+                <div class="modal" id="searcher-contact">
+                    <div class="modal-content">
+                        <div class = "close">+</div>
+                        <form>
+                            <label for="e-mail">Email:</label><br>
+                            <input type="text" id="e-mail" name="e-mail" placeholder='Enter your email' required><br>
+                            <label for="phone">Phone:</label><br>
+                            <input type="tel" id="phone" name="phone" required placeholder='Enter your email'> <br><br>
+                            <button type="submit" value="Submit">Submit</button>
+                            <button type="reset" value="Reset">Reset</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <footer>
+        <p>FINDAPP &copy; 2020</p>
+    </footer>
+
+    <script src="/js/jquery-3.5.1.js"></script>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
