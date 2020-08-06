@@ -39,7 +39,7 @@ $(document).ready(function(){
     var inputtedDropoff = $("input#dropoff").val();
     var newCardDetails = new cardDetails(inputtedNumber, inputtedFirstName, inputtedLastName, inputtedEmail, inputtedDropoff);
     newDocumentType.cardDetails.push(newCardDetails);
-    console.log("Thank you for your submission!");
+    alert("Thank you for your submission!");
     
 
     //$("div#filer-alert").append("<p>" + "Thank you for submitting the card details for " + inputtedNumber + "</p>")
