@@ -27,6 +27,7 @@
                     <option value="passport">Passport</option>
                     <option value="studentId">Student Id</option>
                     <option value="insuranceCard">Insurance card</option>
+                    <option value="birthCertificate">Birth Certificate</option>
                     <option value="atmCard">ATM card</option>
                     </select>
                     <br><br>
@@ -45,9 +46,10 @@
                 </form>
                 <div class="modal" id="filer-alert">
                     <div class="modal-content">
-                      <div class = "close">+</div>
-                      <p>Thank you for submitting this ID. We will send you an alert once the owner is found.</p>
-                      
+                        <button id='close1'class='btn'>x</button>
+                      <p>
+
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -67,6 +69,7 @@
                     <option value="passport">Passport</option>
                     <option value="studentId">Student Id</option>
                     <option value="insuranceCard">Insurance card</option>
+                    <option value="birthCertificate">Birth Certificate</option>
                     <option value="atmCard">ATM card</option>
                     </select>
                     <br><br>
@@ -80,23 +83,25 @@
                 
                 <div class="modal" id="searcher-alert">
                     <div class="modal-content">
-                      <div class = "close">+</div>
-                      <p>A document matching the document number was found!</p>
+                        <button id='close2'class='btn'>x</button>
+                        <p>A document matching the document number was found!</p>
                     </div>
                 </div>
-                <!-- <button class='clseBtn'>Leave your details</button> -->
 
                 <div class="modal" id="searcher-contact">
                     <div class="modal-content">
-                        <div class = "close">+</div>
-                        <form>
-                            <h2>This document is not availble please fill in your contact details</h2>
+                        
+                        <h2>This document is not available.</h2> 
+                        <p> Please fill in your contact details</p>
+                        <form class='modalFind'>
+                            <button id='close3'class='btn'>x</button>
+
                             <label for="e-mail">Email:</label><br>
-                            <input type="text" id="e-mail" name="e-mail" placeholder='Enter your email' required><br>
+                            <input type="text" id="e-mail" name="e-mail" placeholder='Your email' required><br>
                             <label for="phone">Phone:</label><br>
-                            <input type="tel" id="phone" name="phone" required placeholder='Enter your phone number'> <br><br>
+                            <input type="tel" id="phone" name="phone" required placeholder='Your phone number'> <br><br>
                             <button type="submit" value="Submit">Submit</button>
-                            <button type="reset" value="Reset">Reset</button>
+                            <button type="reset" value="Reset" class='btn btn-dark'>Reset</button>
                         </form>
                     </div>
                     

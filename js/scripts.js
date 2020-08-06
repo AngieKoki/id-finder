@@ -44,35 +44,43 @@ $(document).ready(function(){
     var inputtedDropoff = $("input#dropoff").val();
     var newCardDetails = new cardDetails(inputtedNumber, inputtedFirstName, inputtedLastName, inputtedEmail, inputtedDropoff);
     newidentityDocument.cardDetails.push(newCardDetails);
-    alert('Thank you for submitting the card details for ' + inputtedNumber )
-    // $("#filer-alert").style.display = "block";
-    //$("div#filer-alert").append("<p>" + "Thank you for submitting the card details for " + inputtedNumber + "</p>")
+    $("#filer-alert .modal-content").append("<p>" + "Thank you for submitting the card details for " + inputtedNumber + "</p>");
+    $("#filer-alert").show();
+    $('#close1').click(function(){
+      $('#filer-alert').slideUp();
+    });
+      
   });
   $("#loser").submit(function(event){
     event.preventDefault();
+  
     var inputtedDocumentType = $("select#searcherDocumentInput").val();
     var inputtedSearcherNumber = $("input#docNo").val();
     var inputtedSearcherName = $("input#f-name").val();
     var newSearcher = new searcher(inputtedDocumentType, inputtedSearcherNumber, inputtedSearcherName);
-    // searcherIdentityDocument(inputtedDocumentType, inputtedSearcherNumber);
     if (inputtedSearcherNumber === "111"){
-      alert('Mambo '+inputtedSearcherName+ " Your document has been found ");
-      $("#searcher-alert").style.display = "flex";
+      $("#searcher-alert").show();
+      $('#close2').click(function(){
+      $('#searcher-alert').slideUp();
+    })
     }
     else {
       $('#searcher-contact').show();
       $('#searcher-contact').submit(function(){
+        
         var inputtedSearcherEmail = $("input#e-mail").val();
         var inputtedSearcherPhone = $("input#phone").val();
         var newSearcherContact = new searcherContact(inputtedSearcherEmail, inputtedSearcherPhone);
         newSearcher.searcherContact.push(newSearcherContact);
         (alert('We will reach out to you on the number or email: '+inputtedSearcherEmail +' '+inputtedSearcherPhone));
 
-      })
-
-
-      
-    }
+      });
+      $('#close3').click(function(){
+        $('#searcher-contact').slideUp();
+      }); 
+       
+    } 
     
   });
 });
+
